@@ -1,8 +1,10 @@
 Exploring working of sentiment js & bad words js
 
-Intallation:
+
+<strong>Intallation:</strong>
 
 npm install sentiment
+
 npm install bad-words --save
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

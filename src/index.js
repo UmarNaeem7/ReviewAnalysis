@@ -1,15 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import nlp from 'compromise';
 
 function checkSentiment(comment){
+  let doc = nlp(comment)
+
+  // match an implicit term
+  doc.has('going') // true
+
+  // transform
+  doc.contractions().expand()
+  comment = doc.text()  //remove contractions line wasn't->was not
+  alert('contractions removed: ' + comment);
+
   var Sentiment = require('sentiment');
   var sentiment = new Sentiment();
   var result = sentiment.analyze(comment);
 
-  if (result.score>=1){
+  alert('comparative = ' + result.comparative)
+  if (result.comparative>0){
       return 'Positive';
   }
-  else if (result.score>=0){
+  else if (result.score===0){
     return 'Neutral';
   }
   else{

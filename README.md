@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Install following modules before use:
+
+npm install sentiment
+
+npm install bad-words
+
+npm install compromise
+
 ## Available Scripts
 
 In the project directory, you can run:
